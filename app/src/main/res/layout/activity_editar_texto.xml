@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fundo"
+        tools:context=".EditarTextoActivity">
+
+        <TextView
+            android:id="@+id/textViewNomeAutorAlt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/manjari"
+            android:textStyle="bold"
+            android:text="AUTOR:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.077"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTituloAlterar" />
+
+        <TextView
+            android:id="@+id/textViewEd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Editar Texto"
+            android:textColor="#FFFDFD"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/manjari"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.452"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSalvarTextoAlterar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/manjari"
+            android:textStyle="bold"
+            android:text="Salvar"
+            app:backgroundTint="@color/blue3"
+            app:cornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextTituloAlterar"
+            android:layout_width="343dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="48dp"
+            android:ems="10"
+            android:fontFamily="@font/manjari"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.411"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewEd" />
+
+        <EditText
+            android:id="@+id/editTextTextoAlterar"
+            android:layout_width="329dp"
+            android:layout_height="228dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:fontFamily="@font/manjari"
+            android:inputType="textMultiLine"
+            android:lines="8"
+            android:maxLines="10"
+            android:minLines="6"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/btnSalvarTextoAlterar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.412"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextGeneroAlterar"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textViewTituloAlterar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manjari"
+            android:textStyle="bold"
+            android:text="TÍTULO:"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTituloAlterar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.077"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewEd"
+            app:layout_constraintVertical_bias="0.588" />
+
+        <TextView
+            android:id="@+id/textViewTipoAlterar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="92dp"
+            android:fontFamily="@font/manjari"
+            android:textStyle="bold"
+            android:text="TIPO TEXTUAL: "
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextoAlterar"
+            app:layout_constraintEnd_toStartOf="@+id/radioGroupTipoAlterar"
+            app:layout_constraintHorizontal_bias="0.35"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextAutorNomeAlterar"
+            app:layout_constraintVertical_bias="0.006" />
+
+        <EditText
+            android:id="@+id/editTextTextAutorNomeAlterar"
+            android:layout_width="340dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:fontFamily="@font/manjari"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.394"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNomeAutorAlt" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupTipoAlterar"
+            android:layout_width="174dp"
+            android:layout_height="228dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.83"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextAutorNomeAlterar">
+
+            <RadioButton
+                android:id="@+id/radioButtonDescritivoAlterar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manjari"
+                android:text="Descritivo" />
+
+            <RadioButton
+                android:id="@+id/radioButtonNarrativoAlterar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manjari"
+                android:text="Narrativo" />
+
+            <RadioButton
+                android:id="@+id/radioButtonExpositivoAlterar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manjari"
+                android:text="Expositivo" />
+
+            <RadioButton
+                android:id="@+id/radioButtonArgumentativoAlterar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manjari"
+                android:text="Argumentativo" />
+
+            <RadioButton
+                android:id="@+id/radioButtonInjuntivoAlterar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:fontFamily="@font/manjari"
+                android:text="Injuntivo" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textViewGenero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/manjari"
+            android:textStyle="bold"
+            android:text="GÊNERO TEXTUAL: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupTipoAlterar" />
+
+        <EditText
+            android:id="@+id/editTextGeneroAlterar"
+            android:layout_width="343dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:fontFamily="@font/manjari"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewGenero" />
+
+        <TextView
+            android:id="@+id/textViewTexAlt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/manjari"
+            android:textStyle="bold"
+            android:text="TEXTO:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.091"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextGeneroAlterar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

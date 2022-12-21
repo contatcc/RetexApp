@@ -3,13 +3,34 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/drawable/backgroung_button.xml" value="0.1115" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/drawable/bottom_background_light.xml" value="0.1845" />
         <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/drawable/btn_bg.xml" value="0.1945" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.1535" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/drawable/ic_email.xml" value="0.1115" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/drawable/ic_favorite.xml" value="0.1115" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/drawable/ic_left.xml" value="0.2115" />
         <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/drawable/ic_person.xml" value="0.1945" />
         <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/drawable/input_bg.xml" value="0.1945" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/drawable/shape.xml" value="0.196" />
         <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/layout/activity_cadastro.xml" value="0.25" />
-        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/layout/activity_esqueceu_senha.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/layout/activity_criar_texto.xml" value="0.25" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/layout/activity_editar_texto.xml" value="0.33" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/layout/activity_esqueceu_senha.xml" value="0.25" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/layout/activity_exibir_texto.xml" value="0.33" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/layout/activity_favoritos.xml" value="0.25" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/layout/activity_listagem_textos.xml" value="0.17142857142857143" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/layout/activity_listar_texto.xml" value="0.22" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/layout/activity_main_acitivity_recycler_view.xml" value="0.22" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/layout/activity_quem_somos.xml" value="0.22" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/layout/activity_tela_estudante.xml" value="0.22" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/layout/activity_tela_professor.xml" value="0.22" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/layout/list_items.xml" value="0.33" />
+        <entry key="..\:/Users/aline/AndroidStudioProjects/Esboco/app/src/main/res/layout/minha_lista.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/aline/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_list_item_1.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

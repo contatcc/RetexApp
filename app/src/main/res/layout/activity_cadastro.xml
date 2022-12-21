@@ -8,9 +8,10 @@
     tools:context=".CadastroActivity">
 
     <TextView
-        android:id="@+id/textViewTitulo"
+        android:id="@+id/textViewTituloAcesso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/manjari"
         android:text="Cadastre-se"
         android:textColor="@color/white"
         android:textSize="34sp"
@@ -32,6 +33,7 @@
         android:drawableLeft="@drawable/ic_person"
         android:drawablePadding="10dp"
         android:ems="10"
+        android:fontFamily="@font/manjari"
         android:hint="Nome"
         android:inputType="textPersonName"
         android:minHeight="48dp"
@@ -42,7 +44,7 @@
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitulo" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewTituloAcesso" />
 
     <EditText
         android:id="@+id/inputEmail"
@@ -53,6 +55,7 @@
         android:drawableLeft="@drawable/ic_email"
         android:drawablePadding="10dp"
         android:ems="10"
+        android:fontFamily="@font/manjari"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
@@ -74,6 +77,7 @@
         android:drawableLeft="@drawable/ic_security"
         android:drawablePadding="10dp"
         android:ems="10"
+        android:fontFamily="@font/manjari"
         android:hint="Senha"
         android:inputType="textPassword"
         android:minHeight="48dp"
@@ -86,28 +90,63 @@
         app:layout_constraintStart_toStartOf="@+id/inputEmail"
         app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonCadastro"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:background="@drawable/btn_bg"
-        android:backgroundTint="@color/teal_700"
+        android:fontFamily="@font/manjari"
         android:text="Cadastre-se"
+        android:textStyle="bold"
+        app:backgroundTint="@color/blue3"
+        app:cornerRadius="70dp"
         app:layout_constraintEnd_toEndOf="@+id/inputPassword"
         app:layout_constraintStart_toStartOf="@+id/inputPassword"
         app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
 
-    <TextView
-        android:id="@+id/textViewLogin"
+
+    <LinearLayout
+        android:id="@+id/linearLayoutLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCadastro"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonCadastro"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCadastro">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manjari"
+            android:text="Já possui conta? "
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manjari"
+            android:text="Faça login!"
+            android:textColor="@color/purple_500"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBarC"
+        style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:shadowColor="@color/white"
-        android:text="Já possui conta? Faça login."
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/buttonCadastro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/buttonCadastro"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCadastro" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

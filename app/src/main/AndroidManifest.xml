@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.esboco">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +15,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Esboco"
         tools:targetApi="31">
+        <activity
+            android:name=".ExibirTextoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainAcitivityRecyclerView"
+            android:exported="false" />
+        <activity
+            android:name=".FavoritosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListagemTextosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditarTextoActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".QuemSomosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CriarTextoActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".TelaProfessorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TelaEstudanteActivity"
+            android:exported="false" />
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
@@ -36,6 +65,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

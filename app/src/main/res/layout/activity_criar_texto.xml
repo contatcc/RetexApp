@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fundo"
+        tools:context=".CriarTextoActivity">
+
+        <TextView
+            android:id="@+id/textViewNomeAutor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/manjari"
+            android:text="AUTOR:"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.077"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTitulo" />
+
+        <TextView
+            android:id="@+id/textViewCad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Cadastro de Textos"
+            android:textColor="#FFFDFD"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/manjari"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.452"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSalvarTexto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/manjari"
+            android:text="Salvar"
+            android:textStyle="bold"
+            app:backgroundTint="@color/blue3"
+            app:cornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextTitulo"
+            android:layout_width="343dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="56dp"
+            android:ems="10"
+            android:fontFamily="@font/manjari"
+            android:hint="Insira o título do texto"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.424"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCad" />
+
+        <EditText
+            android:id="@+id/editTextTexto"
+            android:layout_width="329dp"
+            android:layout_height="228dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:fontFamily="@font/manjari"
+            android:hint="Insira o texto"
+            android:inputType="textMultiLine"
+            android:lines="8"
+            android:maxLines="10"
+            android:minLines="6"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/btnSalvarTexto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextGenero"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textViewTituloAlterar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manjari"
+            android:text="TÍTULO:"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTitulo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.077"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCad"
+            app:layout_constraintVertical_bias="0.588" />
+
+        <TextView
+            android:id="@+id/textViewTipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="92dp"
+            android:fontFamily="@font/manjari"
+            android:text="TIPO TEXTUAL: "
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTexto"
+            app:layout_constraintEnd_toStartOf="@+id/radioGroupTipo"
+            app:layout_constraintHorizontal_bias="0.35"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextAutorNome"
+            app:layout_constraintVertical_bias="0.006" />
+
+        <EditText
+            android:id="@+id/editTextTextAutorNome"
+            android:layout_width="340dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:fontFamily="@font/manjari"
+            android:hint="Insira o nome do autor"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.394"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNomeAutor" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupTipo"
+            android:layout_width="174dp"
+            android:layout_height="228dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.83"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextAutorNome">
+
+            <RadioButton
+                android:id="@+id/radioButtonDescritivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manjari"
+                android:text="Descritivo" />
+
+            <RadioButton
+                android:id="@+id/radioButtonNarrativo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manjari"
+                android:text="Narrativo" />
+
+            <RadioButton
+                android:id="@+id/radioButtonExpositivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manjari"
+                android:text="Expositivo" />
+
+            <RadioButton
+                android:id="@+id/radioButtonArgumentativo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manjari"
+                android:text="Argumentativo" />
+
+            <RadioButton
+                android:id="@+id/radioButtonInjuntivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manjari"
+                android:minHeight="48dp"
+                android:text="Injuntivo" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textViewGenero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/manjari"
+            android:text="GÊNERO TEXTUAL: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupTipo" />
+
+        <EditText
+            android:id="@+id/editTextGenero"
+            android:layout_width="343dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:fontFamily="@font/manjari"
+            android:hint="Insira o título gênero textual"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewGenero" />
+
+        <TextView
+            android:id="@+id/textViewTex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/manjari"
+            android:text="TEXTO:"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.091"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextGenero" />
+
+        <ProgressBar
+            android:id="@+id/progressBarC"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

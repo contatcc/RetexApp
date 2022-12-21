@@ -8,10 +8,11 @@
     tools:context=".EsqueceuSenhaActivity">
 
     <TextView
-        android:id="@+id/textViewTitulo"
+        android:id="@+id/textViewTituloAcesso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Esqueceu Senha?"
+        android:fontFamily="@font/manjari"
+        android:text="Recuperar Senha?"
         android:textColor="@color/white"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -32,6 +33,7 @@
         android:drawableLeft="@drawable/ic_email"
         android:drawablePadding="10dp"
         android:ems="10"
+        android:fontFamily="@font/manjari"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
@@ -42,16 +44,18 @@
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitulo" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewTituloAcesso" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonEnviar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:background="@drawable/btn_bg"
-        android:backgroundTint="@color/white"
+        android:fontFamily="@font/manjari"
         android:text="Enviar"
+        android:textStyle="bold"
+        app:backgroundTint="@color/blue3"
+        app:cornerRadius="70dp"
         app:layout_constraintEnd_toEndOf="@+id/inputEmail"
         app:layout_constraintStart_toStartOf="@+id/inputEmail"
         app:layout_constraintTop_toBottomOf="@+id/inputEmail" />

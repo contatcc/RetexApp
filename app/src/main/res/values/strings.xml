@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">Esboco</string>
+    <string name="app_name">Repositorio</string>
+    <string name="quem_somos">Este aplicativo faz parte do projeto Mato Escritores do Sul,
+        implantado para os estudantes e professores do Instituto Federal
+        de Mato Grosso do Sul campus Campo Grande. Em uma coletânea digital, possui a finalidade
+        de armazenar as produções acadêmicas dos alunos escritores.</string>
+    <string name="retex">Iniciou-se com o desenvolvimento do site pelas estudantes já formadas do
+        curso técnico em Informática, Bianca Ribas e Ariadne de Paula. A criação deste site representando
+        o projeto, é considerado como o primeiro repositório textual a ser implementado, em 2021. </string>
+    <string name="app">Sendo assim, como forma de facilitar o acesso dos estudantes e profesores,
+        tornou-se possível a implementação do RETEX como uma aplicação mobile, desenvolvida pelas estudantes
+        do 7º semestre do curso técnico de Informática: Aline Hirokawa e Hellen Ribeiro.</string>
+    <string name="aline">ALINE HIROKAWA</string>
+    <string name="hellen">HELLEN RIBEIRO</string>
+    <string name="ariadne">ARIADNE DE PAULA</string>
+    <string name="bianca">BIANCA RIBAS</string>
+    <string name="retexMato">RETEX-Mato Escritores do Sul</string>
+    <string name="mato">Mato Escritores do Sul</string>
+    <string name="retexApp">RETEX App</string>
 </resources>

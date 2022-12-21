@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/azul">
+
+
+        <ImageButton
+            android:id="@+id/imageButtonBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="33dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_left"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/textViewExibeTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="60dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:fontFamily="@font/manjari"
+            android:text="TextView"
+            android:textColor="#37474F"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonBack">
+
+        </TextView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewExibeTitulo"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/textViewExibeTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/manjari"
+                android:text="TextView"
+                android:justificationMode="none"
+                android:textColor="#455A64"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.469"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewQuemSomos" />
+
+
+            <TextView
+                android:id="@+id/textViewExibeA"
+                android:layout_width="205dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/manjari"
+                android:text="TextView"
+                android:textColor="#455A64"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textViewAutorExibe"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewExibeTipoT"
+                android:layout_width="205dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/manjari"
+                android:text="TextView"
+                android:textColor="#455A64"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/textViewExibeA"
+                app:layout_constraintStart_toStartOf="@+id/textViewExibeA"
+                app:layout_constraintTop_toBottomOf="@+id/textViewExibeA" />
+
+            <ImageButton
+                android:id="@+id/imageButtonE"
+                android:layout_width="52dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="76dp"
+                android:layout_marginEnd="140dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/app_name"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonEx"
+                app:layout_constraintTop_toBottomOf="@+id/textViewExibeTexto"
+                app:srcCompat="@drawable/ic_edit"
+                app:tint="@color/blue3" />
+
+            <ImageButton
+                android:id="@+id/imageButtonEx"
+                android:layout_width="54dp"
+                android:layout_height="53dp"
+                android:layout_marginStart="128dp"
+                android:layout_marginTop="76dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/app_name"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toStartOf="@+id/imageButtonE"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewExibeTexto"
+                app:srcCompat="@drawable/ic_delete"
+                app:tint="@color/blue3"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textViewAutorExibe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/manjari"
+                android:text="Autor:"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewTipoEx"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewTipoEx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/manjari"
+                android:text="Tipo Textual:"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewGenEx"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAutorExibe" />
+
+            <TextView
+                android:id="@+id/textViewGenEx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/manjari"
+                android:text="Gênero textual:"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewExibeTexto"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTipoEx" />
+
+            <TextView
+                android:id="@+id/textViewQuemSomos"
+                android:layout_width="205dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/manjari"
+                android:text="TextView"
+                android:textColor="#455A64"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/textViewExibeTipoT"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewExibeTipoT"
+                app:layout_constraintTop_toBottomOf="@+id/textViewExibeTipoT" />
+
+            <ProgressBar
+                android:id="@+id/progressBarQs"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonEx"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageButton
+            android:id="@+id/imageButtonFav"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/app_name"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.89"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonBack"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_favoritar"
+            app:tint="#CAB70D" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

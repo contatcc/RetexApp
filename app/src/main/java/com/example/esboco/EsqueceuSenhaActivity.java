@@ -54,4 +54,10 @@ public class EsqueceuSenhaActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(EsqueceuSenhaActivity.this, LoginActivity.class));
+        super.onBackPressed();
+    }
 }

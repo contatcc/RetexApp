@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,9 +24,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     EditText etEmail, etSenha;
     Button btnL;
-    TextView recSenha, tvC;
+    TextView recSenha;
     LinearLayout llC;
     FirebaseAuth mAuth;
+    ProgressBar pb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         recSenha = findViewById(R.id.textViewEsqueceuSenha);
         btnL = findViewById(R.id.buttonLogin);
         llC = findViewById(R.id.linearLayoutCadastro);
+        pb = findViewById(R.id.progressBarL);
+
+        pb.setVisibility(View.GONE);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -44,24 +49,41 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         recSenha.setOnClickListener(this);
         btnL.setOnClickListener(this);
 
-        @Override
-        public void onClick(View view){
+        }
+
+    @Override
+    public void onClick(View view) {
             switch (view.getId()) {
                 case R.id.buttonLogin:
                     logar();
+
                     break;
-                case R.id.inputPassword:
+                case R.id.textViewEsqueceuSenha:
+                    pb.setVisibility(View.VISIBLE);
                     Intent i = new Intent(LoginActivity.this, EsqueceuSenhaActivity.class);
                     startActivity(i);
+                    finish();
+
+                    pb.setVisibility(View.GONE);
+                    llC.setEnabled(false);
+                    btnL.setEnabled(false);
+                    recSenha.setEnabled(false);
+
                     break;
                 case R.id.linearLayoutCadastro:
                     i = new Intent(LoginActivity.this, CadastroActivity.class);
                     startActivity(i);
+
+                    pb.setVisibility(View.VISIBLE);
+                    llC.setEnabled(false);
+                    recSenha.setEnabled(false);
+                    btnL.setEnabled(false);
+                    pb.setVisibility(View.GONE);
                     break;
             }
-        }
+    }
 
-        private void logar() {
+    private void logar() {
             String email = etEmail.getText().toString();
             String senha = etSenha.getText().toString();
 
@@ -81,40 +103,44 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
-                        //verificar cadastro via email (link para clicar e ativar cadastro)
+                        pb.setVisibility(View.VISIBLE);
+                        btnL.setEnabled(false);
+                        llC.setEnabled(false);
+                        recSenha.setEnabled(false);
                         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                         if (user.isEmailVerified()) {
-                            //se já verificou via email, redireciona login
-                            Intent i = new Intent(LoginActivity.this, HomeActivity.class);
-                            startActivity(i);
+                            if (email.contains("@estudante.ifms.edu.br")) {
+
+                                startActivity(new Intent(LoginActivity.this, TelaEstudanteActivity.class));
+                                finish();
+                            }
+                            else if (email.contains("@ifms.edu.br")) {
+                                startActivity(new Intent(LoginActivity.this, TelaProfessorActivity.class));
+                                finish();
+                            }
+                            else {
+                                pb.setVisibility(View.GONE);
+                                btnL.setEnabled(true);
+                                Toast.makeText(LoginActivity.this, "Tipo de e-mail inválido, tente com a institucional", Toast.LENGTH_SHORT).show();
+                            }
                         }
                         else {
-                            Toast.makeText(LoginActivity.this, "Verifique sua conta via email", Toast.LENGTH_SHORT).show();
+                            pb.setVisibility(View.GONE);
+                            btnL.setEnabled(true);
+                            Toast.makeText(LoginActivity.this, "Verifique sua conta via e-mail, na caixa de spam", Toast.LENGTH_SHORT).show();
                             user.sendEmailVerification();
                         }
                     }
-                    else 
+                    else
                         Toast.makeText(LoginActivity.this, "Erro ao logar", Toast.LENGTH_LONG).show();
-                    }
-                });
-            }
-        }
+                }
+            });
 
+    }
 
-        /*TextView btn = findViewById(R.id.textViewCadastro);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, CadastroActivity.class));
-            }
-        });
-
-        TextView tvES = findViewById(R.id.textViewEsqueceuSenha);
-        tvES.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, EsqueceuSenhaActivity.class));
-            }
-        });
-    }*/
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+        super.onBackPressed();
+    }
 }
